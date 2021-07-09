@@ -1,8 +1,131 @@
 <html>
-    <head></head>
+
+<head>
+</head>
+
 <body>
-<h1>VISUAL STUDIO</h1>
-<H2>CONSOLE</H2>
-var first_name=
+    <p> How to declare the arrays ?
+    <h4 id="declaration_of_arrays"> </h4>
+    </p>
+    <hr>
+    <p> How to fetch the first element of the array ?
+    <h4 id="access_first_element"> </h4>
+    </p>
+    <hr>
+    <p> How to fetch the second element of the array ?
+    <h4 id="access_second_element"> </h4>
+    </p>
+    <hr>
+    <p> How to fetch the third element of the array ?
+    <h4 id="access_third_element"> </h4>
+    </p>
+    <hr>
+    <p> How to get the length of the array ?
+    <h4 id="display_length_of_array"> </h4>
+    </p>
+    <hr>
+    <p> How to loop the array array ?
+    <h4 id="loop_the_array"> </h4>
+    </p>
+    <hr>
+    <p> How to add element at the end of the array ?
+    <h4 id="add_element_at_the_end_of_array"> </h4>
+    </p>
+    <hr>
+    <p> How to add more element at the end of the array ?
+    <h4 id="add_more_element_at_the_end_of_array"> </h4>
+    </p>
+    <hr>
+    <p> How to declare the arrays with alphabets ?
+    <h4 id="display_alphabets_array"> </h4>
+    </p>
+    <hr>
+    <p> How to sort the arrays with alphabets ?
+    <h4 id="display_sorted_alphabets_array"> </h4>
+    </p>
+    <hr>
+    <hr>
+    <p> How to reverse the arrays with alphabets ?
+    <h4 id="display_reverse_array"> </h4>
+    </p>
+    <hr>
+    <p> How to declare the arrays with numbers ?
+    <h4 id="display_number_array"> </h4>
+    </p>
+    <hr>
+    <p> How to find the maximum number from the arrays ?
+    <h4 id="display_maximum_number"> </h4>
+    </p>
+    <hr>
+    <p> How to find the minimum number from the arrays ?
+    <h4 id="display_minimum_number"> </h4>
+    </p>
+    <h3 style="background-color: red; font-size: 23px;"> ADDITIONAL ACTIVITY </h3>
+    <p> How to add element at the start of the array ? Hint use unshift method
+    <h4 id="add_element_at_the_start_of_array"> </h4>
+    </p>
+    <hr>
+    <p> How to add more element at the start of the array ? Hint use unshift method
+    <h4 id="add_more_element_at_the_start_of_array"> </h4>
+    </p>
+    <hr>
+    <p> How to remove element from the start of the array ? Hint use shift method
+    <h4 id="remove_element_from_start_of_array"> </h4>
+    </p>
+    <hr>
+    <p> How to remove element from the end of the array ? Hint use pop method
+    <h4 id="remove_element_from_end_of_array"> </h4>
+    </p>
+    <hr>
+    <p> How to merge two arrays ? Hint define two arrays and then use concat method for eg - array1.concat(array2)
+    <h4 id="merge_two_arrays"> </h4>
+    </p>
 </body>
+<script>
+    var flowers = ["Jasmine", "Lily", "Lotus", "Rose"];
+    document.getElementById("declaration_of_arrays").innerHTML = flowers;
+    console.log(flowers);
+    var F1 = flowers[0];
+    document.getElementById("access_first_element").innerHTML = F1;
+    var F2 = flowers[1];
+    document.getElementById("access_second_element").innerHTML = F2;
+    var F3 = flowers[2];
+    document.getElementById("access_third_element").innerHTML = F3;
+    var flength = flowers.length;
+    document.getElementById("display_length_of_array").innerHTML = flength;
+    var array_values = "";
+    for (i = 0; i < flowers.length; i++) {
+        console.log(flowers[i]);
+        array_values = array_values + flowers[i] + "<br>";
+    }
+    console.log(array_values);
+    document.getElementById("loop_the_array").innerHTML = array_values;
+    flowers.push("Lavinder");
+    document.getElementById("add_element_at_the_end_of_array").innerHTML = flowers;
+    flowers.push("sunflower", "marigold", "crosendra");
+    document.getElementById("add_more_element_at_the_end_of_array").innerHTML = flowers;
+    var atoz = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"];
+    document.getElementById("display_alphabets_array").innerHTML = atoz;
+    atoz.sort();
+    document.getElementById("display_sorted_alphabets_array").innerHTML = atoz;
+    atoz.reverse();
+    document.getElementById("display_reverse_array").innerHTML = atoz;
+    var num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    document.getElementById("display_number_array").innerHTML = num;
+
+    var max = Math.max.apply(Math, num);
+    document.getElementById("display_maximum_number").innerHTML = max;
+    var min = Math.min.apply(Math, num);
+    document.getElementById("display_minimum_number").innerHTML = min;
+    flowers.unshift("Star Jasmine","Pomogrenate flower");
+    document.getElementById("add_element_at_the_start_of_array").innerHTML=flowers;
+    flowers.shift()
+    document.getElementById("remove_element_from_start_of_array").innerHTML=flowers;
+flowers.pop()
+document.getElementById("remove_element_from_end_of_array").innerHTML=flowers;
+
+var combined=num.concat(atoz);
+document.getElementById("merge_two_arrays").innerHTML=combined;
+</script>
+
 </html>
